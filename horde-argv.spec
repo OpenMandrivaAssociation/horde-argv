@@ -5,7 +5,7 @@
 
 Name:          horde-argv
 Version:       0.1.0
-Release:       %mkrel 1
+Release:       %mkrel 2
 Summary:       Horde command-line argument parsing package
 License:       LGPL
 Group:         Networking/Mail
@@ -15,7 +15,6 @@ BuildArch:     noarch
 Requires(pre): %{_bindir}/pear
 Requires:      php-pear
 Requires:      php-pear-channel-horde
-BuildRequires: horde-framework
 BuildRequires: php-pear
 BuildRequires: php-pear-channel-horde
 BuildRoot:      %{_tmppath}/%{name}-%{version}
