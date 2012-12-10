@@ -5,7 +5,7 @@
 
 Name:          horde-argv
 Version:       0.1.0
-Release:       %mkrel 24
+Release:       25
 Summary:       Horde command-line argument parsing package
 License:       LGPL
 Group:         Networking/Mail
@@ -37,9 +37,6 @@ pear install --packagingroot %{buildroot} --nodeps package.xml
 %__mkdir_p %{buildroot}%{xmldir}
 %__cp package.xml %{buildroot}%{xmldir}/%{prj}.xml
 
-%clean
-%__rm -rf %{buildroot}
-
 %post
 pear install --nodeps --soft --force --register-only %{xmldir}/%{prj}.xml
 
@@ -66,4 +63,22 @@ fi
 %{peardir}/Horde/Argv/Parser.php
 %{peardir}/Horde/Argv/TitledHelpFormatter.php
 %{peardir}/Horde/Argv/Values.php
+
+
+
+%changelog
+* Mon Jul 26 2010 Thomas Spuhler <tspuhler@mandriva.org> 0.1.0-24mdv2011.0
++ Revision: 560372
+- Increased release for rebuild
+
+* Thu Mar 18 2010 Thomas Spuhler <tspuhler@mandriva.org> 0.1.0-23mdv2010.1
++ Revision: 524822
+- replaced Requires(pre): %%{_bindir}/pear with Requires(pre): php-pear
+
+* Mon Feb 22 2010 Thomas Spuhler <tspuhler@mandriva.org> 0.1.0-2mdv2010.1
++ Revision: 509358
+- removed buildrequires: horde-framework
+- replace PreReq: with Requires(pre):
+- import horde-argv
+
 
