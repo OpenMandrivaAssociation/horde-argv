@@ -5,7 +5,7 @@
 
 Name:          horde-argv
 Version:       0.1.0
-Release:       25
+Release:       26
 Summary:       Horde command-line argument parsing package
 License:       LGPL
 Group:         Networking/Mail
